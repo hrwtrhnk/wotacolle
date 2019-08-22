@@ -4,20 +4,12 @@
     <div class="sign-form-wrapper">
       <%=form_for @user do |f|%>
         <div class="sign-form">
-          <%= f.label :nickname, "Nickname: ", class: "each-sign-form" %><br>
-          <%= f.text_field :nickname, class: "each-sign-form"%>
-        </div>
-        <div class="sign-form">
           <%= f.label :email, "Email: ", class: "each-sign-form" %><br>
           <%= f.text_field :email, class: "each-sign-form"%>
         </div>
         <div class="sign-form">
           <%= f.label :password, "Password: ", class: "each-sign-form" %><br>
-          <%= f.text_field :password, class: "each-sign-form" %>
-        </div>
-        <div class="sign-form" >
-          <%= f.label :password_confirmation, "PasswordConfirmation: ", class: "each-sign-form" %><br>
-          <%= f.text_field :password_confirmation, class: "each-sign-form"%>
+          <%= f.password_field :password, class: "each-sign-form" %>
         </div>
         <%= f.submit "Start Wotacolle", class: "sign-btn" %>
       <% end %>
