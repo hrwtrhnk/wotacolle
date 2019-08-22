@@ -1,0 +1,64 @@
+.default-wrapper{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 1000px;
+  margin: 115px 200px;
+  &__left-box{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    min-height: 600px;
+    background-color: #fff;
+    border: solid 1px $form-border;
+    border-radius: 3px;
+    margin-top: 15px;
+    &__inner{
+      &:first-child{
+        margin-top: 10px;
+      }
+      border-bottom: solid 1px $form-border;
+      margin: 0 10px;
+      padding: 15px 5px;
+      font-size: 15px;
+    }
+  }
+  &__right-box{
+    position: absolute;
+    right: 0;
+    width: 825px;
+    height: 100%;
+  }
+}
+
+.user-box{
+  font-size: 20px;
+}
+
+.item-cards{
+  margin: 13px;
+}
+.item-card{
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px $form-border;
+  width: 180px;
+  height: 240px;
+  padding: 5px;
+  margin: 5px 3px;
+  &__image{
+    background-color: $bluish-gray;
+    margin: auto;
+    height: 180px;
+    width: 180px;
+  }
+  &__user{
+    font-size: 15px;
+    padding-top: 15px;
+  }
+  &__down{
+    font-size: 15px;
+    padding-top: 5px;
+  }
+}
+

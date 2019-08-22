@@ -1,0 +1,29 @@
+<header>
+  <div class="header-container">
+    <div class="upper-box">
+      <div class="upper-box__title">
+        WOTACOLLE
+      </div>
+      <div class="upper-box__search">
+        <form>
+          <div class="search-container">
+            <input type="search" placeholder="写真を探す" class="upper-box__search__text"></input>
+            <button type="submit" class="upper-box__search__btn"> 🔍 </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="downer-box">
+      <div class="downer-box__right">
+        <i>🔔通知</i>
+        <i> 👤マイページ</i>
+        <%= link_to "a", destroy_user_session_path, method: :delete %>
+      </div>
+      <div class="downer-box__left">
+        <i>🏠ホーム</i>
+        <i>🏷タグ一覧</i>
+      </div>
+    </div>
+  </div>
+</header>

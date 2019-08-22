@@ -1,0 +1,59 @@
+header{
+  background-color: #fff;
+  height: 90px;
+  box-shadow: 0 0 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.header-container{
+  padding: 20px 200px 15px;
+}
+
+.upper-box{
+  position: relative;
+  &__title{
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+    border-bottom: solid 1px black;
+  }
+  &__search{
+    position: absolute;
+    right: 0;
+    width: 800px;
+    &__text{
+      width: 750px;
+      height: 25px;
+      margin: 0;
+      padding: 5px;
+      border: solid 1px $form-border;
+      border-radius: 3px;
+    }
+    &__btn{
+      width: 40px;
+      height: 25px;
+      margin: 0;
+      border: solid 1px $form-border;
+    }
+  }
+}
+
+.downer-box{
+  position: relative;
+  margin-top: 40px;
+  &__left{
+    position: absolute;
+    left: 0;
+    font-size: 15px;
+    margin-top: 3px;
+  }
+  &__right{
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+  }
+}
