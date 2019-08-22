@@ -123,3 +123,14 @@ legend {
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
+
+button{
+  margin: inherit;
+  padding: inherit;
+  border-radius: 3px;
+  background-color: inherit;
+}
+
+i{
+  font-style: inherit;
+}

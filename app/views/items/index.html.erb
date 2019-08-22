@@ -1,0 +1,28 @@
+<%= render partial: 'items/header' %>
+
+<body>
+  <main class="default-wrapper">
+    <div class="default-wrapper__left-box">
+      <div class="default-wrapper__left-box__inner user-box">
+        👤 ユーザー名
+      </div>
+      <div class="default-wrapper__left-box__inner follow-box">
+        フォロー　　１２ <br>
+        フォロワー　１０
+      </div>
+      <div class="default-wrapper__left-box__inner favorite-box">
+        いいね一覧
+      </div>
+    </div>
+    <div class="default-wrapper__right-box">
+      <div class="item-cards">
+        <%= render partial: 'items/item-card'%>
+        <%= render partial: 'items/item-card'%>
+        <%= render partial: 'items/item-card'%>
+        <%= render partial: 'items/item-card'%>
+        <%= render partial: 'items/item-card'%>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
