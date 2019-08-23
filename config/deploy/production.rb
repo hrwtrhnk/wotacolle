@@ -1,6 +1,6 @@
 server '3.114.227.106', user: 'ec2-user', roles: %w{app db web}
 set :ssh_options, {
-  keys: [File.expand_path('~/.ssh/hinako0175.pem)')]
+  keys: [File.expand_path('~/.ssh/watarihinako0175.pem)')]
  }
 
 
