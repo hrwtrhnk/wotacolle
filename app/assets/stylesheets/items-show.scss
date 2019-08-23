@@ -11,7 +11,7 @@
   width: 643px;
   height :643px;
   margin: 20px auto 25px;
-  padding: 4px;
+  padding: 2px;
   &__image{
     // background-color: #fff;
     background: url(jazmin-quaynor-8ioenvmof-I-unsplash.jpg);
@@ -22,7 +22,7 @@
 }
 
 .item-user-information{
-  border: solid 4px $bluish-gray;
+  border: solid 2px $bluish-gray;
   width: 625px;
   padding: 15px 10px 10px;
   margin: 0 auto;
@@ -61,7 +61,7 @@
 
 .item-caption{
   // background-color: $bluish-gray;
-  border: solid 4px $bluish-gray;
+  border: solid 2px $bluish-gray;
   width: 605px;
   height: 100px;
   margin: 15px auto;
@@ -70,7 +70,7 @@
 }
 
 .item-comment-box{
-  border: solid 4px $bluish-gray;
+  border: solid 2px $bluish-gray;
   width: 625px;
   min-height: 500px;
   margin: 0 auto;
