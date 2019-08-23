@@ -13,6 +13,9 @@
       <div class="default-wrapper__left-box__inner favorite-box">
         いいね一覧
       </div>
+      <div class="default-wrapper__left-box__btn logout-btn">
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+      </div>
     </div>
     <div class="default-wrapper__right-box">
       <div class="item-cards">

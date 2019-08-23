@@ -1,0 +1,106 @@
+h1.mypage{
+  margin: 50px auto 15px;
+  font-size: 25px;
+  width: 700px;
+}
+
+.mypage-wrapper{
+  background-color: #fff;
+  width: 900px;
+  min-height: 1500px;
+  margin: 120px auto;
+}
+.mypages-cover{
+  position: relative;
+  &__image{
+    height: 200px;
+    background: url(bricks-459299_1920.jpg);
+    background-size: cover;
+  }
+  &__user{
+    position: absolute;
+    left: 100px;
+    top: 155px;
+    height: 90px;
+    width: 700px;
+    &__icon{
+      display: inline-block;
+      height: 90px;
+      width: 90px;
+      background-color: $bluish-gray;
+    }
+    &__name{
+      display: inline-block;
+      font-size: 27px;
+      margin-top: 0px;
+      margin-left: 5px;
+    }
+    .edit-profile-btn{
+      border: solid 2px gray;
+      border-radius: 3px;
+      float: right;
+      margin-top: 50px;
+      width: 150px;
+      height: 30px;
+      color: gray;
+      text-decoration: underline;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
+
+
+
+.mypage-follow{
+  width: 700px;
+  margin: 60px auto 0; 
+  &__follow{
+    display: inline-block;
+    margin-right: 10px;
+  }
+  &__follower{
+    display: inline-block;
+  }
+}
+
+.mypage-profile{
+  // border: solid 2px $bluish-gray;
+  border-right: solid 1px gray;
+  border-left: solid 1px gray;
+  margin: 0 auto; 
+  min-height: 150px;
+  width: 610px;
+  padding: 40px;
+  line-height: 1.2rem;
+}
+
+
+.mypage-item-cards{
+  margin: 0 auto;
+  padding-left: 40px;
+  width: 650px;
+  border-right: solid 1px gray;
+  border-left: solid 1px gray;
+}
+
+.mypage-item-card{
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px $form-border;
+  width: 180px;
+  height: 200rpx;
+  padding: 5px;
+  margin: 5px 3px;
+  &__image{
+    background-color: $bluish-gray;
+    margin: auto;
+    height: 180px;
+    width: 180px;
+  }
+  &__down{
+    margin-left: 115px;
+    font-size: 15px;
+    padding-top: 5px;
+  }
+}

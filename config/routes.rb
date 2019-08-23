@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:index, :show, :new, :edit, :update]
   resources :items, only: [:index, :show]
+  resources :mypages, only: [:index]
 
 end
