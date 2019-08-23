@@ -1,0 +1,149 @@
+.item-wrapper{
+  background-color: #fff;
+  width: 900px;
+  min-height: 1500px;
+  margin: 120px auto;
+  padding-top: 20px;
+}
+
+.item-image-box{
+  background-color: $bluish-gray;
+  width: 643px;
+  height :643px;
+  margin: 20px auto 25px;
+  padding: 4px;
+  &__image{
+    // background-color: #fff;
+    background: url(jazmin-quaynor-8ioenvmof-I-unsplash.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.item-user-information{
+  border: solid 4px $bluish-gray;
+  width: 625px;
+  padding: 15px 10px 10px;
+  margin: 0 auto;
+  min-height: 100px;
+  &__upper{
+    position: relative;
+    height: 50px;
+    &__user-icon{
+      position: absolute;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+      background-color: $bluish-gray;
+    }
+    &__user-name{
+      position: absolute;
+      left: 65px;
+      width: 400px;
+      padding-top: 10px;
+      font-size: 20px;
+    }
+    &__favorite{
+      position: absolute;
+      right: 20px;
+      min-width: 50px;
+      font-size: 25px;
+    }
+  }
+  &__tag-box{
+    padding: 0 10px;
+    height: 50px;
+    max-width: 530px;
+  }
+}
+
+.item-caption{
+  // background-color: $bluish-gray;
+  border: solid 4px $bluish-gray;
+  width: 605px;
+  height: 100px;
+  margin: 15px auto;
+  padding: 20px;
+  line-height: 1.2rem;
+}
+
+.item-comment-box{
+  border: solid 4px $bluish-gray;
+  width: 625px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 20px 10px 0;
+  &__form{
+    &__textarea{
+      width: 600px;
+      height: 30px;
+      padding: 10px;
+    }
+  }
+  &__got-comment{
+    border: solid 1px $form_border;
+    width: 600px;
+    min-height: 400px;
+    padding: 10px;
+    margin: 15px 0 15px;
+    &__each{
+      position: relative;
+      min-height: 55px;
+      margin-bottom: 15px;
+      &__left{
+        position: absolute;
+        left: 0;
+        height: 20px;
+        &__icon{
+          width: 40px;
+          height: 40px;
+          font-size: 30px;
+          background-color: $bluish-gray;
+        }
+      }
+      &__right{
+        position: absolute;
+        left: 50px;
+        &__user-name{
+          font-size: 15px;
+          font-weight: bolder;
+        }
+        &__comment{
+          margin-top: 5px;
+          font-size: 15px;
+        }
+        &__down{
+          font-size: 12px;
+          margin-top: 5px;
+          &__date{
+            display: inline-block;
+            color: gray;
+          }
+          &__replay{
+            display: inline-block;
+            color: $bluish-gray;
+          }
+        }
+      }
+    }
+  }
+  &__more{
+    color: #fff;
+    background-color: $bluish-gray;
+    border: solid 1px $form_border;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    width: 620px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.item-empty-box{
+  width: 650px;
+  height: 50px;
+}

@@ -1,0 +1,39 @@
+<%= render partial: 'items/header' %>
+
+<body>
+  <div class="item-wrapper">
+    <div class="item-image-box">
+      <div class="item-image-box__image">
+      </div>
+    </div>
+
+    <div class="item-user-information">
+      <div class="item-user-information__upper">
+        <div class="item-user-information__upper__user-icon"></div>
+        <div class="item-user-information__upper__user-name"> ユーザー名 </div>
+        <div class="item-user-information__upper__favorite"> ♡ 12</div>
+      </div>
+      <div class="item-user-information__tag-box">
+        <div class="tem-user-information__tag-box__tags"> #aaa #bbb #ccc #ddd #eee #fff</div>
+      </div>
+    </div>
+
+    <div class="item-caption">
+      CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION
+    </div>
+
+    <div class="item-comment-box">
+      <div class="item-comment-box__form">
+        <textarea placeholder="comment" class="item-comment-box__form__textarea"></textarea>
+      </div>
+      <div class="item-comment-box__got-comment">
+        <%= render partial: 'items/item-comment' %>
+        <%= render partial: 'items/item-comment' %>
+      </div>
+      <div class="item-comment-box__more"> - MORE COMMENTS - </div>
+    </div>
+
+    <div class="item-empty-box"></div>
+
+  </div>
+</body>
