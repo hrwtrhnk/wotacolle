@@ -23,7 +23,7 @@
       font-size: 15px;
     }
     &__btn{
-      border: solid 2px $form_border;
+      border: solid 2px gray;
       border-radius: 2px;
       text-align: center;
       line-height: 35px;
@@ -41,7 +41,7 @@
 }
 
 .logout-btn{
-  color: $form_border;
+  color: gray;
   font-weight: bolder;
   text-decoration: underline;
 }
