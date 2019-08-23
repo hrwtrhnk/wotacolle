@@ -13,26 +13,26 @@ h1.mypage{
 .mypages-cover{
   position: relative;
   &__image{
-    height: 150px;
+    height: 200px;
     background: url(bricks-459299_1920.jpg);
     background-size: cover;
   }
   &__user{
     position: absolute;
     left: 100px;
-    top: 105px;
+    top: 155px;
     height: 90px;
     width: 700px;
     &__icon{
       display: inline-block;
-      height: 80px;
-      width: 80px;
+      height: 90px;
+      width: 90px;
       background-color: $bluish-gray;
     }
     &__name{
       display: inline-block;
-      font-size: 30px;
-      margin-top: 60px;
+      font-size: 27px;
+      margin-top: 0px;
       margin-left: 5px;
     }
     .edit-profile-btn{
@@ -66,12 +66,12 @@ h1.mypage{
 
 .mypage-profile{
   // border: solid 2px $bluish-gray;
-  border-right: solid 2px gray;
-  border-left: solid 2px gray;
+  border-right: solid 1px gray;
+  border-left: solid 1px gray;
   margin: 0 auto; 
   min-height: 150px;
-  width: 650px;
-  padding: 20px;
+  width: 610px;
+  padding: 40px;
   line-height: 1.2rem;
 }
 
@@ -80,8 +80,8 @@ h1.mypage{
   margin: 0 auto;
   padding-left: 40px;
   width: 650px;
-  border-right: solid 2px gray;
-  border-left: solid 2px gray;
+  border-right: solid 1px gray;
+  border-left: solid 1px gray;
 }
 
 .mypage-item-card{
