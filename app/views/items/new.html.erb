@@ -1,0 +1,27 @@
+<%= render partial: 'items/header' %>
+
+<body>
+  <main class="item-new-wrapper">
+
+    <div class="item-new__left">
+      <div class="item-new__left__image"> 画像を追加</div>
+    </div>
+
+    <div class="item-new__right">
+      <form>
+        <div class="item-new__right__tag">
+          <h1>- TAGS -</h1>
+          <textarea placeholder="タグを追加" class="new-tag"></textarea>
+        </div>
+        <div class="item-new__right__caption">
+          <h1>- CAPTION -</h1>
+          <textarea placeholder="キャプションを追加" class="new-caption"></textarea>
+        </div>
+        <div class="item-new__right__post-btn">
+          <button type="submit" class="new-post-btn"> POST </button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+</body>

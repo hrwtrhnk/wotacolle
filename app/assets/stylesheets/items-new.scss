@@ -1,0 +1,61 @@
+.item-new-wrapper{
+  background-color: #fff;
+  margin: 130px auto 0;
+  height: 650px;
+  width: 1030px;
+  position: relative;
+}
+
+.item-new__left{
+  position: absolute;
+  left: 0;
+  height: 650px;
+  width: 600px;
+  &__image{
+    background-color: $bluish-gray;
+    border: solid 1px $form-border;
+    height: 550px;
+    width: 550px;
+    margin: 50px auto;
+  }
+}
+
+.item-new__right{
+  position: absolute;
+  right: 0;
+  height: 530px;
+  width: 400px;
+  padding: 60px 25px;
+  &__tag{
+    margin: 5px 0 30px;
+  }
+  &__caption{
+    margin-bottom: 30px;
+  }
+  &__post-btn{
+    margin: 40px 0;
+  }
+}
+
+.new-tag{
+  margin-top: 10px;
+  width: 99%;
+  height: 100px;
+}
+
+.new-caption{
+  margin-top: 10px;
+  width: 99%;
+  height: 250px;
+}
+
+.new-post-btn{
+  // width: 200px;
+  width: 99%;
+  height: 40px;
+  margin: 0;
+  background-color: $form_border;
+  font-size: 18px; 
+  color: #fff;
+  text-decoration: underline; 
+}
