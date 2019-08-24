@@ -75,5 +75,5 @@ end
 
 gem 'devise'
 gem 'carrierwave'
-gem 'mini-magick'
+gem 'mini_magick'
 gem 'fog-aws'
