@@ -18,6 +18,7 @@
       <div class="downer-box__right">
         <i>🔔通知</i>
         <i> 👤マイページ</i>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "logout-btn" %>
       </div>
       <div class="downer-box__left">
         <i>🏠ホーム</i>
