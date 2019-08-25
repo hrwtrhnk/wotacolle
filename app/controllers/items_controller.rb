@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
 
   def index
-    @items = Item.order("created_at DESC").limit(20).includes(:user)
+    @items = Item.order("created_at DESC").includes(:user)
   end
 
   def show

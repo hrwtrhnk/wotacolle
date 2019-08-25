@@ -17,10 +17,11 @@
         <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "logout-btn" %>
       </div>
     </div>
+
     <div class="default-wrapper__right-box">
       <div class="item-cards">
         <% @items.each do |item| %>
-          <%= render partial: 'items/item-card', locals: { item: item }%>
+          <%= render partial: 'items/item-card', locals: { item: item } %>
         <% end %>
         </div>
       </div>

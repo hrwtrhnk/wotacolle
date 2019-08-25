@@ -22,10 +22,9 @@
 
     <h1 class="mypage"> - COLLECTIONS - </h1>
     <div class="mypage-item-cards">
-      <%= render partial: 'mypages/mypage-item-card'%>
-      <%= render partial: 'mypages/mypage-item-card'%>
-      <%= render partial: 'mypages/mypage-item-card'%>
-      <%= render partial: 'mypages/mypage-item-card'%>
+      <% @items.each do |item| %>
+          <%= render partial: 'mypages/mypage-item-card', locals: { item: item } %>
+      <% end %>
     </div>
   </div>
 </body>
