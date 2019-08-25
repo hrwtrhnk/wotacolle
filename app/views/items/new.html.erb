@@ -2,29 +2,31 @@
 
 <body>
   <main class="item-new-wrapper">
-
-    <div class="item-new__left">
-      <div class="item-new__left__image"> 
-        <form type="file">
+    <%= form_for @item, method: :post, class: "item-new__form-wrapper" do |f| %>
+      <div class="item-new__left">
+        <div class="item-new__left__image"> 
+          <div class="item-new__left__image__form-wrapper">
+            <%= f.file_field :image, class: "item-new__left__image__file-field" %>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="item-new__right">
-      <form>
-        <div class="item-new__right__tag">
-          <h1>- TAGS -</h1>
-          <textarea placeholder="タグを追加" class="new-tag"></textarea>
-        </div>
-        <div class="item-new__right__caption">
-          <h1>- CAPTION -</h1>
-          <textarea placeholder="キャプションを追加" class="new-caption"></textarea>
-        </div>
-        <div class="item-new__right__post-btn">
-          <button type="submit" class="new-post-btn"> POST </button>
-        </div>
-      </form>
-    </div>
-
+      <div class="item-new__right">
+        <form>
+          <div class="item-new__right__tag">
+            <h1>- TAGS -</h1>
+            <textarea placeholder="タグを追加(未実装)" class="new-tag"></textarea>
+          </div>
+          <div class="item-new__right__caption">
+            <h1>- CAPTION -</h1>
+            <%= f.text_area :caption, class: "new-caption", placeholder: "キャプションを追加" %>
+          </div>
+          <div class="item-new__right__post-btn">
+            <%= f.submit "POST", class: "new-post-btn"%>
+          </div>
+        </form>
+      </div>
+    <% end %>
   </main>
 </body>
 
