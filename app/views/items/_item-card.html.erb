@@ -1,8 +1,9 @@
 <div class="item-card">
   <div class="item-card__image">
+    <%= image_tag item.image.to_s, class: "item-card__image" %>
   </div>
   <div class="item-card__user">
-    👤ユーザー名
+    <%= item.user.nickname %>
   </div>
   <div class="item-card__down">
     ♡15

@@ -19,11 +19,9 @@
     </div>
     <div class="default-wrapper__right-box">
       <div class="item-cards">
-        <%= render partial: 'items/item-card'%>
-        <%= render partial: 'items/item-card'%>
-        <%= render partial: 'items/item-card'%>
-        <%= render partial: 'items/item-card'%>
-        <%= render partial: 'items/item-card'%>
+        <% @items.each do |item| %>
+          <%= render partial: 'items/item-card', locals: { item: item }%>
+        <% end %>
         </div>
       </div>
     </div>

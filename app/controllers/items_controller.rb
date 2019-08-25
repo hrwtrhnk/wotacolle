@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
 
   def index
-    @items =Item.order("created_at DESC").limit(20)
+    @items = Item.order("created_at DESC").limit(20).includes(:user)
   end
 
   def show
@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-
     if @item.save
       redirect_to mypages_path
     else
