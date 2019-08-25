@@ -3,14 +3,13 @@
 <body>
   <div class="item-wrapper">
     <div class="item-image-box">
-      <div class="item-image-box__image">
-      </div>
+        <%= image_tag @item.image.to_s, class: "item-image-box__image" %>
     </div>
 
     <div class="item-user-information">
       <div class="item-user-information__upper">
         <div class="item-user-information__upper__user-icon"></div>
-        <div class="item-user-information__upper__user-name"> ユーザー名 </div>
+        <div class="item-user-information__upper__user-name"> <%= @user.nickname %> </div>
         <div class="item-user-information__upper__favorite"> ♡ 12</div>
       </div>
       <div class="item-user-information__tag-box">
@@ -19,7 +18,7 @@
     </div>
 
     <div class="item-caption">
-      CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION CAPTION
+      <%= @item.caption %>
     </div>
 
     <div class="item-comment-box">

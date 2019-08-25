@@ -1,9 +1,13 @@
 class ItemsController < ApplicationController
 
+  before_action :set_item, only: [:show]
+
   def index
+    @items =Item.order("created_at DESC").limit(20)
   end
 
   def show
+    @user = User.find(current_user.id)
   end
   
   def new
@@ -24,7 +28,15 @@ class ItemsController < ApplicationController
   private
   
   def item_params
-    params.require(:item).permit(:id, :image, :caption)
+    params.require(:item).permit(:id, :image, :caption).merge(user_id: current_user.id)
+  end
+
+  def user_params
+    params.require(:user).permit(:id, :nickname, :icon, :cover)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end

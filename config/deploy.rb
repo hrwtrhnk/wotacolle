@@ -24,7 +24,8 @@ set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
-# secrets.yml用のシンボリックリンクを追加
+
+# シンボリックリンクを追加
 set :linked_files, %w{ config/master.key }
 
 #  環境変数の設定
