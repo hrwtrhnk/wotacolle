@@ -3,22 +3,31 @@
 <body>
   <main class="default-wrapper">
     <div class="default-wrapper__left-box">
-      <div class="default-wrapper__left-box__inner user-box">
-        <%= link_to mypages_path do %>
-          <div class="user-box__icon"> <%= @user.icon %> </div>
-          <div class="user-box__nickname"> <%= @user.nickname %> </div>
-        <% end %>
-      </div>
-      <div class="default-wrapper__left-box__inner follow-box">
-        フォロー　　１２ <br>
-        フォロワー　１０
-      </div>
-      <div class="default-wrapper__left-box__inner favorite-box">
-        いいね一覧
-      </div>
-      <div class="default-wrapper__left-box__btn logout-btn">
-        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "logout-btn" %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="default-wrapper__left-box__inner user-box">
+          <%= link_to mypages_path do %>
+            <div class="user-box__icon"> <%= @user.icon %> </div>
+            <div class="user-box__nickname"> <%= @user.nickname %> </div>
+          <% end %>
+        </div>
+        <div class="default-wrapper__left-box__inner follow-box">
+          フォロー　　１２ <br>
+          フォロワー　１０
+        </div>
+        <div class="default-wrapper__left-box__inner favorite-box">
+          いいね一覧
+        </div>
+        <div class="default-wrapper__left-box__btn logout-btn">
+          <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+        </div>
+      <% else %>
+        <div class="default-wrapper__left-box__inner">
+          <%= link_to "新規登録", new_user_registration_path, class: "sign-box" %>
+        </div>
+        <div class="default-wrapper__left-box__inner">
+          <%= link_to "ログイン", new_user_session_path, class: "sign-box" %>
+        </div>
+      <% end %>
     </div>
 
     <div class="default-wrapper__right-box">
