@@ -25,7 +25,9 @@
       <h1 class="item-index-head"> –––––––––––––––––––––　 NEW POSTS 　–––––––––––––––––––– </h1>
       <div class="item-cards">
         <% @items.each do |item| %>
-          <%= render partial: 'items/item-card', locals: { item: item } %>
+          <%= link_to item_path(item) do%>
+            <%= render partial: 'items/item-card', locals: { item: item } %>
+          <% end %>
         <% end %>
         </div>
       </div>
