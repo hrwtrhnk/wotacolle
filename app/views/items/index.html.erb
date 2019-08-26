@@ -4,7 +4,10 @@
   <main class="default-wrapper">
     <div class="default-wrapper__left-box">
       <div class="default-wrapper__left-box__inner user-box">
-        👤 ユーザー名
+        <%= link_to mypages_path do %>
+          <div class="user-box__icon"> <%= @user.icon %> </div>
+          <div class="user-box__nickname"> <%= @user.nickname %> </div>
+        <% end %>
       </div>
       <div class="default-wrapper__left-box__inner follow-box">
         フォロー　　１２ <br>
@@ -19,9 +22,12 @@
     </div>
 
     <div class="default-wrapper__right-box">
+      <h1 class="item-index-head"> –––––––––––––––––––––　 NEW POSTS 　–––––––––––––––––––– </h1>
       <div class="item-cards">
         <% @items.each do |item| %>
-          <%= render partial: 'items/item-card', locals: { item: item } %>
+          <%= link_to item_path(item) do%>
+            <%= render partial: 'items/item-card', locals: { item: item } %>
+          <% end %>
         <% end %>
         </div>
       </div>

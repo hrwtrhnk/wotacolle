@@ -17,12 +17,16 @@
     <div class="downer-box">
       <div class="downer-box__right">
         <i>🔔通知</i>
-        <i> 👤マイページ</i>
-        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+        <%= link_to mypages_path do%> 
+          <div class="downer-box__right__icon"><%= @user.icon %></div>
+          <div class="downer-box__right__nickname"><%= @user.nickname %></div>
+        <% end %>
       </div>
       <div class="downer-box__left">
-        <i>🏠ホーム</i>
-        <i>🏷タグ一覧</i>
+        <%= link_to root_path do%> 
+          <div class="downer-box__left__home"> 🏠ホーム </div>
+        <% end %>
+        <div class="downer-box__left__tag">🏷タグ一覧</div>
       </div>
     </div>
   </div>

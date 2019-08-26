@@ -47,7 +47,24 @@
 }
 
 .user-box{
-  font-size: 20px;
+  &__icon{
+    display: inline-block;
+    background-color: $bluish-gray;
+    height: 50px;
+    width: 50px;
+  }
+  &__nickname{
+    display: inline-block;
+    color: black;
+    font-size: 25px;
+  }
+}
+
+.item-index-head{
+  height: 20px;
+  margin: 13px 15px;
+  padding: 15px 0;
+  font-size: 25px;
 }
 
 .item-cards{
@@ -61,6 +78,7 @@
   height: 240px;
   padding: 5px;
   margin: 5px 3px;
+  color: black;
   &__image{
     background-color: $bluish-gray;
     margin: auto;
