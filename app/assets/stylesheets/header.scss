@@ -50,10 +50,30 @@ header{
     left: 0;
     font-size: 15px;
     margin-top: 3px;
+    &__home{
+      display: inline-block;
+      color: black;
+    }
+    &__tag{
+      display: inline-block;
+      color: black;
+    }
   }
   &__right{
     position: absolute;
+    top: -3px;
     right: 0;
     font-size: 15px;
+    &__icon{
+      display: inline-block;
+      margin-left: 10px;
+      background-color: $bluish-gray;
+      height: 20px;
+      width: 20px;
+    }
+    &__nickname{
+      display: inline-block;
+      color: black;
+    }
   }
 }
