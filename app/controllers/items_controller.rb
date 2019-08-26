@@ -39,6 +39,8 @@ class ItemsController < ApplicationController
   end
 
   def set_user
-    @user = User.find(current_user.id)
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
   end
 end
