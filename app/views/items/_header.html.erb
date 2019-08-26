@@ -15,18 +15,19 @@
     </div>
 
     <div class="downer-box">
+      <div class="downer-box__left">
+        <%= link_to root_path do%> 
+          <div class="downer-box__left__home"> 🏠ホーム </div>
+        <% end %>
+        <div class="downer-box__left__tag">🏷タグ一覧</div>
+      </div>
       <div class="downer-box__right">
         <i>🔔通知</i>
         <%= link_to mypages_path do%> 
           <div class="downer-box__right__icon"><%= @user.icon %></div>
           <div class="downer-box__right__nickname"><%= @user.nickname %></div>
         <% end %>
-      </div>
-      <div class="downer-box__left">
-        <%= link_to root_path do%> 
-          <div class="downer-box__left__home"> 🏠ホーム </div>
-        <% end %>
-        <div class="downer-box__left__tag">🏷タグ一覧</div>
+        <%= link_to "➕投稿", new_item_path, class: "downer-box__right__new-post-btn" %>
       </div>
     </div>
   </div>
