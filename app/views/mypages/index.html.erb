@@ -23,7 +23,9 @@
     <h1 class="mypage"> - COLLECTIONS - </h1>
     <div class="mypage-item-cards">
       <% @items.each do |item| %>
+        <%= link_to item_path(item) do%>
           <%= render partial: 'mypages/mypage-item-card', locals: { item: item } %>
+        <% end %>
       <% end %>
     </div>
   </div>
