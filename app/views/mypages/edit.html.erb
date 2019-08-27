@@ -1,0 +1,42 @@
+<%= render partial: 'items/header' %>
+
+<body>
+  <div class="mypage-wrapper">
+    <% if @user.id == @currentuser.id %>
+      <%= form_for @currentuser do |f|%>
+        <div class="mypages-cover">
+          <div class="mypages-cover__image"></div>
+          <div class="mypages-cover__user">
+            <div class="mypages-cover__user__icon">アイコンを変更<br>
+              <%= f.file_field :icon, class: "mypages-cover__user__icon__edit" %>
+            </div>
+            <%= f.text_field :nickname, class: "mypages-cover__user__name", placeholder: "ユーザー名を変更" %>
+            <%= f.submit "UPDATE PROFILE", class: "update-profile-btn" %>
+          </div>
+        </div>
+
+
+        <div class="mypage-follow"> 
+          <div class="mypage-follow__follow"> フォロー 12 </div>
+          <div class="mypage-follow__follower"> フォロワー 20 </div>
+        </div>
+        
+        <h1 class="mypage"> - PROFILE - </h1>
+        <div class="mypage-profile">
+          <%= f.text_area :introduction, class: "mypage-profile__edit-introduction", placeholder: "プロフィールを追加" %>
+        </div>
+
+        <h1 class="mypage"> - COLLECTIONS - </h1>
+        <div class="mypage-item-cards">
+          <% @items.each do |item| %>
+            <%= link_to item_path(item) do%>
+              <%= render partial: 'mypages/mypage-item-card', locals: { item: item } %>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</body>
+
+<%= render partial: 'items/footer' %>

@@ -1,13 +1,15 @@
 class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :show, :new, :edit]
+  before_action :set_user, only: [:index, :show, :new]
+  before_action :set_currentuser, only: [:index, :show, :edit]
 
   def index
     @items = Item.order("created_at DESC").includes(:user)
   end
 
   def show
+    @user = User.find_by(id: params[:id])
   end
   
   def new
@@ -42,7 +44,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  
+
   private
   
   def item_params
@@ -50,7 +52,7 @@ class ItemsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:id, :nickname, :icon, :cover)
+    params.require(:user).permit(:id, :nickname, :icon, :cover, :introduction)
   end
 
   def set_item
@@ -60,6 +62,12 @@ class ItemsController < ApplicationController
   def set_user
     if user_signed_in?
       @user = User.find(current_user.id)
+    end
+  end
+
+  def set_currentuser
+    if user_signed_in?
+      @currentuser = User.find(current_user.id)
     end
   end
 end
