@@ -58,13 +58,28 @@
 }
 
 .item-caption{
-  // background-color: $bluish-gray;
+  position: relative;
   border: solid 2px $bluish-gray;
   width: 605px;
   height: 100px;
   margin: 15px auto;
   padding: 20px;
   line-height: 1.2rem;
+  &__edit-btn{
+    box-shadow: 5px 5px  $bluish-gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background-color: gray;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2rem;
+    color: #fff;
+  }
 }
 
 .item-comment-box{
@@ -141,7 +156,29 @@
   }
 }
 
+.item-delete-btn{
+  background-color: gray;
+  border: solid 2px $bluish-gray;
+  height: 30px;
+  width: 607px;
+  margin: 40px auto 10px;
+  padding: 20px;
+  line-height: 1.7rem;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+}
+
+.item-delete-btn-link{
+  text-decoration: none;
+}
+
 .item-empty-box{
   width: 650px;
   height: 50px;
+}
+
+.edit-caption{
+  height: 100px;
+  width: 100%;
 }

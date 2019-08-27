@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show]
-  before_action :set_user, only: [:index, :show, :new]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:index, :show, :new, :edit]
 
   def index
     @items = Item.order("created_at DESC").includes(:user)
@@ -22,8 +22,27 @@ class ItemsController < ApplicationController
       render :new
     end
   end
-  
 
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      render 'items/edit'
+    end
+  end
+  
+  def destroy
+    if @item.destroy
+      redirect_to mypages_path
+    else
+      render :show
+    end
+  end
+
+  
   private
   
   def item_params
