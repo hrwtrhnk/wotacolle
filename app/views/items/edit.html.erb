@@ -18,9 +18,11 @@
     </div>
 
     <div class="item-caption">
-      <%= form_for @item, class: "item-edit__form-wrapper" do |f| %>
-        <%= f.text_area :caption, class: "edit-caption", placeholder: "キャプションを追加" %>
-        <%= f.submit " - UPDATE - ", class: "item-caption__edit-btn" %>
+      <% if user_signed_in? && current_user.id == @item.user_id %>
+        <%= form_for @item, class: "item-edit__form-wrapper" do |f| %>
+          <%= f.text_area :caption, class: "edit-caption", placeholder: "キャプションを追加" %>
+          <%= f.submit " - UPDATE - ", class: "item-caption__edit-btn" %>
+        <% end %>
       <% end %>
     </div>
 

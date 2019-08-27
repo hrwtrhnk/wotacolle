@@ -18,7 +18,9 @@
     </div>
 
     <div class="item-caption">
-      <%= link_to "- EDIT -", edit_item_path, class: "item-caption__edit-btn"%>
+      <% if user_signed_in? && current_user.id == @item.user_id %>
+        <%= link_to "- EDIT -", edit_item_path, class: "item-caption__edit-btn"%>
+      <% end %>
       <%= @item.caption %>
     </div>
 
@@ -32,9 +34,11 @@
       </div>
       <div class="item-comment-box__more"> - MORE COMMENTS - </div>
     </div>
-    
-    <%= link_to item_path, method: :delete, class: "item-delete-btn-link", data: { confirm: '削除しますか？' } do %>
-      <div class="item-delete-btn"> ＊＊＊＊＊＊＊＊ DELETE ITEM ＊＊＊＊＊＊＊＊ </div>
+
+    <% if user_signed_in? && current_user.id == @item.user_id %>
+      <%= link_to item_path, method: :delete, class: "item-delete-btn-link", data: { confirm: '削除しますか？' } do %>
+        <div class="item-delete-btn"> ＊＊＊＊＊＊＊＊ DELETE ITEM ＊＊＊＊＊＊＊＊ </div>
+      <% end %>
     <% end %>
     <div class="item-empty-box"></div>
 
