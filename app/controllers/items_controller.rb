@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:index, :show, :new]
-  before_action :set_currentuser, only: [:index, :show, :edit, :new]
+  before_action :set_currentuser, only: [:index, :show, :edit, :new, :destroy]
 
   def index
     @items = Item.order("created_at DESC").includes(:user)
@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
   
   def destroy
     if @item.destroy
-      redirect_to mypages_path
+      redirect_to mypage_path(@current_user)
     else
       render :show
     end
