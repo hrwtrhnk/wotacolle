@@ -8,7 +8,11 @@
 
     <div class="item-user-information">
       <div class="item-user-information__upper">
-        <%= image_tag @currentuser.icon.to_s, class: "item-user-information__upper__user-icon" %>
+        <% if @currentuser.icon ==! nil %>
+          <%= image_tag @currentuser.icon.to_s, class: "item-user-information__upper__user-icon" %>
+        <% else %>
+          <div class="item-user-information__upper__user-icon"></div>
+        <% end %>
         <div class="item-user-information__upper__user-name"> <%= @item.user.nickname %> </div>
         <div class="item-user-information__upper__favorite"> ♡ 12</div>
       </div>

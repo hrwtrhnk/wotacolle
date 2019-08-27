@@ -6,7 +6,11 @@
       <% if user_signed_in? %>
         <div class="default-wrapper__left-box__inner user-box">
           <%= link_to mypage_path(@currentuser) do %>
-            <%= image_tag @currentuser.icon.to_s, class: "user-box__icon" %>
+            <% if @currentuser.icon != nil %>
+              <%= image_tag @currentuser.icon.to_s, class: "user-box__icon" %>
+            <% else %>
+              <div class="user-box__icon"></div>
+            <% end %>
             <div class="user-box__nickname"> <%= @user.nickname %> </div>
           <% end %>
         </div>

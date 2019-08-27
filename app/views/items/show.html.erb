@@ -9,11 +9,15 @@
     <div class="item-user-information">
       <div class="item-user-information__upper">
         <%= link_to mypage_path(@item.user) do%>
-          <%= image_tag @user.icon.to_s, class: "item-user-information__upper__user-icon" %>
+          <% if @item.user.icon != nil %>
+            <%= image_tag @item.user.icon.to_s, class: "item-user-information__upper__user-icon" %>
+          <% else %>
+            <div class="item-user-information__upper__user-icon"></div>
+          <% end %>
           <div class="item-user-information__upper__user-name">
             <%= @item.user.nickname %>
-        <% end %>
           </div>
+        <% end %>
         <div class="item-user-information__upper__favorite"> ♡ 12</div>
       </div>
       <div class="item-user-information__tag-box">
