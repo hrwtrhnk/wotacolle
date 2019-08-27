@@ -25,7 +25,7 @@
         <div class="downer-box__right">
           <i>🔔通知</i>
           <%= link_to mypage_path(@currentuser) do%> 
-            <div class="downer-box__right__icon"><%= @currentuser.icon %></div>
+            <%= image_tag @currentuser.icon.to_s, class: "downer-box__right__icon" %>
             <div class="downer-box__right__nickname"><%= @currentuser.nickname %></div>
           <% end %>
           <%= link_to "➕投稿", new_item_path, class: "downer-box__right__new-post-btn" %>

@@ -9,7 +9,7 @@
     <div class="item-user-information">
       <div class="item-user-information__upper">
         <%= link_to mypage_path(@item.user) do%>
-          <div class="item-user-information__upper__user-icon"></div>
+          <%= image_tag @currentuser.icon.to_s, class: "item-user-information__upper__user-icon" %>
           <div class="item-user-information__upper__user-name">
             <%= @item.user.nickname %>
         <% end %>
