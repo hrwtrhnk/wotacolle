@@ -5,9 +5,18 @@
     <div class="mypages-cover">
       <div class="mypages-cover__image"></div>
       <div class="mypages-cover__user">
-        <div class="mypages-cover__user__icon"></div>
+        <div class="mypages-cover__user__icon">
+          <%= image_tag @user.icon.to_s, class: "mypages-cover__user__icon"%>
+        </div>
         <div class="mypages-cover__user__name"> <%= @user.nickname %> </div>
-        <div class="edit-profile-btn"> EDIT PROFILE </div>
+        <% if user_signed_in? && @user.id == @currentuser.id %>
+          <%= link_to edit_mypage_path(@currentuser) do %>
+            <div class="edit-profile-btn"> EDIT PROFILE </div>
+            <%= link_to destroy_user_session_path, method: :delete do%>
+              <div class="logout-btn"> LOG OUT </div>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
     </div>
 
@@ -18,7 +27,9 @@
     </div>
     
     <h1 class="mypage"> - PROFILE - </h1>
-    <div class="mypage-profile"> HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! HELLO! </div>
+    <div class="mypage-profile">
+      <%= @user.introduction %>
+    </div>
 
     <h1 class="mypage"> - COLLECTIONS - </h1>
     <div class="mypage-item-cards">
