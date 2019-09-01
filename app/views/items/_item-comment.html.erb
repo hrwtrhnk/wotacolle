@@ -5,9 +5,11 @@
     </div>
   </div>
   <div class="item-comment-box__got-comment__each__right">
-    <div class="item-comment-box__got-comment__each__right__user-name">
-      <%= comment.user.nickname %>
-    </div>
+    <%= link_to mypage_path(@currentuser) do %>
+      <div class="item-comment-box__got-comment__each__right__user-name">
+        <%= comment.user.nickname %>
+      </div>
+    <% end %>
     <div class="item-comment-box__got-comment__each__right__comment"> <%= comment.comment %> </div>
     <div class="item-comment-box__got-comment__each__right__down">
       <div class="item-comment-box__got-comment__each__right__down__date"> <%= comment.created_at %> </div>
