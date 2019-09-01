@@ -14,7 +14,7 @@ h1.mypage{
   position: relative;
   &__image{
     height: 200px;
-    background: url(bricks-459299_1920.jpg);
+    background-image: image-url("bricks-459299_1920.jpg");
     background-size: cover;
   }
   &__user{
