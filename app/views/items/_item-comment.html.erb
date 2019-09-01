@@ -1,6 +1,8 @@
 <div class="item-comment-box__got-comment__each">
   <div class="item-comment-box__got-comment__each__left">
-    <div class="item-comment-box__got-comment__each__left__icon"></div>
+    <div class="item-comment-box__got-comment__each__left__icon">
+      <%= image_tag comment.user.icon.to_s, class: "item-comment-box__got-comment__each__left__icon" %>
+    </div>
   </div>
   <div class="item-comment-box__got-comment__each__right">
     <div class="item-comment-box__got-comment__each__right__user-name">
