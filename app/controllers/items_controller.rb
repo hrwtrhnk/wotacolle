@@ -9,6 +9,9 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @comments = @item.comments.all.order("created_at DESC").includes(:user)
+    # @comment = Comment.new
+    @comment  = @item.comments.build(user_id: current_user.id) if current_user
   end
   
   def new

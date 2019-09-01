@@ -88,10 +88,26 @@
   margin: 0 auto;
   padding: 20px 10px 0;
   &__form{
+    position: relative;
     &__textarea{
       width: 600px;
-      height: 30px;
+      height: 100%;
       padding: 10px;
+    }
+    &__submit-btn{
+      box-shadow: 4px 4px  $bluish-gray;
+      background-color: gray;
+      border-radius: 3px;
+      position: absolute;
+      top: -12px;
+      right: 0px;
+      width: 85px;
+      height: 30px;
+      margin: 0;
+      font-size: 15px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
     }
   }
   &__got-comment{

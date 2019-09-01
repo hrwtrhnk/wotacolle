@@ -33,14 +33,21 @@
     </div>
 
     <div class="item-comment-box">
-      <div class="item-comment-box__form">
-        <textarea placeholder="comment" class="item-comment-box__form__textarea"></textarea>
-      </div>
+      <% if user_signed_in? %>
+        <%= form_for [@item, @comment], local: true do |f| %>
+          <div class="item-comment-box__form">
+            <%= f.text_area :comment, placeholder: "comment", class: "item-comment-box__form__textarea" %>
+            <%= f.submit "- SEND -", class: "item-comment-box__form__submit-btn" %>
+          </div>
+        <% end %>
+      <% end %>
+      
       <div class="item-comment-box__got-comment">
-        <%= render partial: 'items/item-comment' %>
-        <%= render partial: 'items/item-comment' %>
+        <% @comments.each do |comment| %>
+          <%= render partial: 'items/item-comment', locals: { comment: comment } %>
+        <% end %>
       </div>
-      <div class="item-comment-box__more"> - MORE COMMENTS - </div>
+        <div class="item-comment-box__more"> - MORE COMMENTS - </div>
     </div>
 
     <% if user_signed_in? && current_user.id == @item.user_id %>
