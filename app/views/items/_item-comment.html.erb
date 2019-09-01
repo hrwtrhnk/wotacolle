@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="item-comment-box__got-comment__each__right">
-    <%= link_to mypage_path(@currentuser) do %>
+    <%= link_to mypage_path(comment.user) do%>
       <div class="item-comment-box__got-comment__each__right__user-name">
         <%= comment.user.nickname %>
       </div>
