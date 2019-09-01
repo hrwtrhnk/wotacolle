@@ -84,7 +84,7 @@
 .item-comment-box{
   border: solid 2px $bluish-gray;
   width: 625px;
-  min-height: 500px;
+  min-height: 0px;
   margin: 0 auto;
   padding: 20px 10px 0;
   &__form{
@@ -113,7 +113,6 @@
   &__got-comment{
     border: solid 1px $form_border;
     width: 600px;
-    min-height: 400px;
     padding: 10px;
     margin: 15px 0 15px;
     &__each{

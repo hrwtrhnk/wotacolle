@@ -40,6 +40,8 @@
             <%= f.submit "- SEND -", class: "item-comment-box__form__submit-btn" %>
           </div>
         <% end %>
+      <% else %>
+        コメントにはログインが必要です。
       <% end %>
       
       <div class="item-comment-box__got-comment">
@@ -47,7 +49,7 @@
           <%= render partial: 'items/item-comment', locals: { comment: comment } %>
         <% end %>
       </div>
-        <div class="item-comment-box__more"> - MORE COMMENTS - </div>
+        <%# <div class="item-comment-box__more"> - MORE COMMENTS - </div> %>
     </div>
 
     <% if user_signed_in? && current_user.id == @item.user_id %>
