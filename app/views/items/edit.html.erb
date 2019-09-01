@@ -30,26 +30,6 @@
       <% end %>
     </div>
 
-    <div class="item-comment-box">
-      <% if user_signed_in? %>
-        <%= form_for [@item, @comment], local: true do |f| %>
-          <div class="item-comment-box__form">
-            <%= f.text_area :comment, placeholder: "comment", class: "item-comment-box__form__textarea" %>
-            <%= f.submit "- SEND -", class: "item-comment-box__form__submit-btn" %>
-          </div>
-        <% end %>
-      <% else %>
-        コメントにはログインが必要です。
-      <% end %>
-      
-      <div class="item-comment-box__got-comment">
-        <% @comments.each do |comment| %>
-          <%= render partial: 'items/item-comment', locals: { comment: comment } %>
-        <% end %>
-      </div>
-        <%# <div class="item-comment-box__more"> - MORE COMMENTS - </div> %>
-    </div>
-
     <div class="item-empty-box"></div>
 
   </div>
