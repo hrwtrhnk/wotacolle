@@ -3,10 +3,12 @@
     <div class="item-comment-box__got-comment__each__left__icon"></div>
   </div>
   <div class="item-comment-box__got-comment__each__right">
-    <div class="item-comment-box__got-comment__each__right__user-name"> ユーザー名 </div>
-    <div class="item-comment-box__got-comment__each__right__comment"> 良きみが深い！ </div>
+    <div class="item-comment-box__got-comment__each__right__user-name">
+      <%= comment.user.nickname %>
+    </div>
+    <div class="item-comment-box__got-comment__each__right__comment"> <%= comment.comment %> </div>
     <div class="item-comment-box__got-comment__each__right__down">
-      <div class="item-comment-box__got-comment__each__right__down__date"> 8月24日 </div>
+      <div class="item-comment-box__got-comment__each__right__down__date"> <%= comment.created_at %> </div>
       <div class="item-comment-box__got-comment__each__right__down__replay"> 　返信 </div>
     </div>
   </div>

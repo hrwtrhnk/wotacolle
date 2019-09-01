@@ -34,19 +34,20 @@
 
     <div class="item-comment-box">
       <% if user_signed_in? %>
-        <%= form_for @comment, method: :post do |f| %>
+        <%= form_for [@item, @comment], local: true do |f| %>
           <div class="item-comment-box__form">
             <%= f.text_area :comment, placeholder: "comment", class: "item-comment-box__form__textarea" %>
             <%= f.submit "- SEND -", class: "item-comment-box__form__submit-btn" %>
           </div>
         <% end %>
       <% end %>
-      <% @comments.each do |comment| %>
-        <div class="item-comment-box__got-comment">
+      
+      <div class="item-comment-box__got-comment">
+        <% @comments.each do |comment| %>
           <%= render partial: 'items/item-comment', locals: { comment: comment } %>
-        </div>
+        <% end %>
+      </div>
         <div class="item-comment-box__more"> - MORE COMMENTS - </div>
-      <% end %>
     </div>
 
     <% if user_signed_in? && current_user.id == @item.user_id %>
