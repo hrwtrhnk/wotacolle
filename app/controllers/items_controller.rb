@@ -6,11 +6,12 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order("created_at DESC").includes(:user)
+    @item = Item.find_by(params[:id])
+    # @comments_count = @item.comments.where(item_id: @item.id).count
   end
 
   def show
     @comments = @item.comments.all.order("created_at DESC").includes(:user)
-    # @comment = Comment.new
     @comment  = @item.comments.build(user_id: current_user.id) if current_user
   end
   
